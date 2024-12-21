@@ -235,7 +235,7 @@ func (s *session) refLoop() {
 		case <-timer.C:
 
 		case r := <-s.fileRefCh:
-			ref := make(map[int64]int)
+			ref := make(map[int64]int, len(fileRef))
 			for f, c := range fileRef {
 				ref[f] = c
 			}
