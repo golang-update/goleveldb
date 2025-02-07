@@ -8,6 +8,7 @@ package leveldb
 
 import (
 	"fmt"
+	"math"
 	"sync/atomic"
 	"time"
 	"unsafe"
@@ -378,6 +379,11 @@ func (v *version) computeCompaction() {
 			// setting, or very high compression ratios, or lots of
 			// overwrites/deletions).
 			score = float64(len(tables)) / float64(v.s.o.GetCompactionL0Trigger())
+
+			// Make sure always set score to max if there are as many files as the pause trigger so that we can resume write asap.
+			if len(tables) >= v.s.o.GetWriteL0PauseTrigger() {
+				score = math.MaxFloat64
+			}
 		} else {
 			score = float64(size) / float64(v.s.o.GetCompactionTotalSize(level))
 		}
