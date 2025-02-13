@@ -20,13 +20,13 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/syndtr/goleveldb/leveldb"
-	"github.com/syndtr/goleveldb/leveldb/errors"
-	"github.com/syndtr/goleveldb/leveldb/filter"
-	"github.com/syndtr/goleveldb/leveldb/opt"
-	"github.com/syndtr/goleveldb/leveldb/storage"
-	"github.com/syndtr/goleveldb/leveldb/table"
-	"github.com/syndtr/goleveldb/leveldb/util"
+	"github.com/golang-update/goleveldb/leveldb"
+	"github.com/golang-update/goleveldb/leveldb/errors"
+	"github.com/golang-update/goleveldb/leveldb/filter"
+	"github.com/golang-update/goleveldb/leveldb/opt"
+	"github.com/golang-update/goleveldb/leveldb/storage"
+	"github.com/golang-update/goleveldb/leveldb/table"
+	"github.com/golang-update/goleveldb/leveldb/util"
 )
 
 var (

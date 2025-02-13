@@ -9,8 +9,8 @@ package iterator_test
 import (
 	. "github.com/onsi/ginkgo"
 
-	. "github.com/syndtr/goleveldb/leveldb/iterator"
-	"github.com/syndtr/goleveldb/leveldb/testutil"
+	. "github.com/golang-update/goleveldb/leveldb/iterator"
+	"github.com/golang-update/goleveldb/leveldb/testutil"
 )
 
 var _ = testutil.Defer(func() {

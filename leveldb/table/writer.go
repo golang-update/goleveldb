@@ -12,12 +12,12 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/golang/snappy"
+	"github.com/golang-update/snappy"
 
-	"github.com/syndtr/goleveldb/leveldb/comparer"
-	"github.com/syndtr/goleveldb/leveldb/filter"
-	"github.com/syndtr/goleveldb/leveldb/opt"
-	"github.com/syndtr/goleveldb/leveldb/util"
+	"github.com/golang-update/goleveldb/leveldb/comparer"
+	"github.com/golang-update/goleveldb/leveldb/filter"
+	"github.com/golang-update/goleveldb/leveldb/opt"
+	"github.com/golang-update/goleveldb/leveldb/util"
 )
 
 func sharedPrefixLen(a, b []byte) int {
